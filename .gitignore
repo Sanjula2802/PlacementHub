@@ -1,0 +1,68 @@
+# ====================================================
+# Placement Hub - Git Ignore Rules
+# ====================================================
+
+# 1. Database & Persistence (CRITICAL: Excludes student data & backups)
+instance/
+instance/*.db
+instance/placementhub.db
+instance/placementhub_backup_*.db
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+server/data/db.json
+server/data/policy.json
+
+# 2. Environment Variables & Secrets (CRITICAL: Excludes tokens & keys)
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# 3. Node Dependencies & Build Artifacts
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# 4. Python Bytecode, Caches & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# 5. Logs & Temporary Files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.tmp
+*.bak
+
+# 6. IDE & Operating System Artifacts
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
