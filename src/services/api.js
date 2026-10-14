@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || '/api').replace(/\/+$/, '');
 export const TOKEN_STORAGE_KEY = 'placementhub_auth_token';
 
 export const getStoredToken = () => {
